@@ -40,7 +40,7 @@ document.getElementById('contactForm').addEventListener('submit', async function
   btn.disabled = true;
 
   try {
-    const res = await fetch('http://localhost:3000/api/contact', {
+    const res = await fetch('/api/contact', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(formData),
@@ -79,4 +79,5 @@ document.querySelectorAll('.why-card, .service-card, .product-card, .testimonial
   el.style.transform = 'translateY(30px)';
   el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
   observer.observe(el);
+
 });
